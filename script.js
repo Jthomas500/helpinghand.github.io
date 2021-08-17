@@ -156,10 +156,29 @@ let locations = {
     },
 
 }
-
-
+//Information Template
 /*name: "",
             description: "",
             address: "",
             website: "",
             image: "", */
+
+//Location Arrays
+let yonkersArray = [locations.yonkers.place1, locations.yonkers.place2, locations.yonkers.place3, locations.yonkers.place4, locations.yonkers.place5, locations.yonkers.place6, locations.yonkers.place7];
+let bronxArray = [locations.bronx.place1, locations.bronx.place2, locations.bronx.place3, locations.bronx.place4, locations.bronx.place5, locations.bronx.place6, locations.bronx.place7];
+let albanyArray = [locations.albany.place1, locations.albany.place2, locations.albany.place3, locations.albany.place4, locations.albany.place5, locations.albany.place6, locations.albany.place7];
+
+for (let i = 0; i < 5; i++){
+    let x = Math.floor(Math.random() * 7);
+    console.log(yonkersArray[x]);
+}
+
+for (let i = 0; i < 5; i++){
+    let x = Math.floor(Math.random() * 7);
+    console.log(bronxArray[x]);
+}
+
+for (let i = 0; i < 5; i++){
+    let x = Math.floor(Math.random() * 7);
+    console.log(albanyArray[x]);
+}

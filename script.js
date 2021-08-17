@@ -100,6 +100,58 @@ let locations = {
             address: "Arlington Ave",
             website: "https://www.nybloodcenter.org/support-us/volunteer-nybc/volunteer-application/",
             image: "images/NY-BLood-Center-Log.jpg",
+        },   
+    },
+
+    albany: {
+        place1: {
+            name: "East Greenbush Community Library",
+            description: "East Greenbush Community Library is an ordinary library. Volunteers that work at the Library have the responsibility to do tasks like shelving and organizing events.",
+            address: "10 Community Way, East Greenbush",
+            website: "https://eglibrary.org/about/volunteers-and-careers/",
+            image: "images/East Greenbush Library.png",
+        },
+        place2: {
+            name: "Joseph's House and Shelter INC",
+            description: "Joseph's House and Shelter INC is a homeless shelter that offers housing and other services to homeless adults, youths, and families to support them.",
+            address: "74th Ferry St, Troy",
+            website: "https://www.josephshousetroy.org/help/volunteerism-service-learning-internships-community-service-including-mandated-service-hours",
+            image: "images/Josephs house and shelter.png",
+        },
+        place3: {
+            name: "Alzheimer's Association of Northeastern New York",
+            description: "Alzheimer's Association is an organization dedicated to ending Alzheimer's and all other forms of dementia by contributing to research.",
+            address: "4 Pine West Plaza Suite 405",
+            website: "https://www.alz.org/local_resources/find_your_local_chapter?page=volunteer",
+            image: "images/alzheimers association.png",
+        },
+        place4: {
+            name: "",
+            description: "",
+            address: "",
+            website: "",
+            image: "",
+        },
+        place5: {
+            name: "",
+            description: "",
+            address: "",
+            website: "",
+            image: "",
+        },
+        place6: {
+            name: "",
+            description: "",
+            address: "",
+            website: "",
+            image: "",
+        },
+        place7: {
+            name: "",
+            description: "",
+            address: "",
+            website: "",
+            image: "",
         },
     },
 

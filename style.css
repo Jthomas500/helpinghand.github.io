@@ -1,0 +1,19 @@
+.button-div{
+    display: flex;
+    flex-direction: column;
+    /*border: 5px solid green;*/
+    align-items: center;
+}
+
+.buttons{
+    margin-bottom: 10px;
+    width: 200px;
+    height: 40px;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+#city-selector-text{
+    font-family: sans-serif;
+    font-size: 30px;
+}

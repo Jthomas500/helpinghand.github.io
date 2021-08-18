@@ -164,11 +164,26 @@ let locations = {
             image: "", */
 
 //Location Arrays
-let yonkersArray = [locations.yonkers.place1, locations.yonkers.place2, locations.yonkers.place3, locations.yonkers.place4, locations.yonkers.place5, locations.yonkers.place6, locations.yonkers.place7];
-let bronxArray = [locations.bronx.place1, locations.bronx.place2, locations.bronx.place3, locations.bronx.place4, locations.bronx.place5, locations.bronx.place6, locations.bronx.place7];
-let albanyArray = [locations.albany.place1, locations.albany.place2, locations.albany.place3, locations.albany.place4, locations.albany.place5, locations.albany.place6, locations.albany.place7];
+let yonkersnameArray = [locations.yonkers.place1.name, locations.yonkers.place2.name, locations.yonkers.place3.name, locations.yonkers.place4.name, locations.yonkers.place5.name, locations.yonkers.place6.name, locations.yonkers.place7.name];
+let yonkersimgArray = [locations.yonkers.place1.image, locations.yonkers.place2.image, locations.yonkers.place3.image, locations.yonkers.place4.image, locations.yonkers.place5.image, locations.yonkers.place6.image, locations.yonkers.place7.image];
+let yonkersdesArray = [locations.yonkers.place1.description, locations.yonkers.place2.description, locations.yonkers.place3.description, locations.yonkers.place4.description, locations.yonkers.place5.description, locations.yonkers.place6.description, locations.yonkers.place7.description];
+let yonkersaddArray = [locations.yonkers.place1.address, locations.yonkers.place2.address, locations.yonkers.place3.address, locations.yonkers.place4.address, locations.yonkers.place5.address, locations.yonkers.place6.address, locations.yonkers.place7.address];
+let yonkerswebArray = [locations.yonkers.place1.website, locations.yonkers.place2.website, locations.yonkers.place3.website, locations.yonkers.place4.website, locations.yonkers.place5.website, locations.yonkers.place6.website, locations.yonkers.place7.website];
 
-for (let i = 0; i < 5; i++){
+let bronxnameArray = [locations.bronx.place1.name, locations.bronx.place2.name, locations.bronx.place3.name, locations.bronx.place4.name, locations.bronx.place5.name, locations.bronx.place6.name, locations.bronx.place7.name];
+let bronximgArray = [locations.bronx.place1.image, locations.bronx.place2.image, locations.bronx.place3.image, locations.bronx.place4.image, locations.bronx.place5.image, locations.bronx.place6.image, locations.bronx.place7.image];
+let bronxdesArray = [locations.bronx.place1.description, locations.bronx.place2, description, locations.bronx.place3.description, locations.bronx.place4.description, locations.bronx.place5.description, locations.bronx.place6.description, locations.bronx.place7.description];
+let bronxaddArray = [locations.bronx.place1.address, locations.bronx.place2.address, locations.bronx.place3.address, locations.bronx.place4.address, locations.bronx.place5.address, locations.bronx.place6.address, locations.bronx.place7.address];
+let bronxwebArray = [locations.bronx.place1.website, locations.bronx.place2.website, locations.bronx.place3.website, locations.bronx.place4.website, locations.bronx.place5.website, locations.bronx.place6.website, locations.bronx.place7.website];
+
+let albanynameArray = [locations.albany.place1.name, locations.albany.place2.name, locations.albany.place3.name, locations.albany.place4.name, locations.albany.place5.name, locations.albany.place6.name, locations.albany.place7.name];
+let albanyimgArray = [locations.albany.place1.image, locations.albany.place2.image, locations.albany.place3.image, locations.albany.place4.image, locations.albany.place5.image, locations.albany.place6.image, locations.albany.place7.image];
+let albanydesArray = [locations.albany.place1.description, locations.albany.place2.description, locations.albany.place3.description, locations.albany.place4.description, locations.albany.place5.description, locations.albany.place6.description, locations.albany.place7.description];
+let albanyaddArray = [locations.albany.place1.address, locations.albany.place2.address, locations.albany.place3.address, locations.albany.place4.address, locations.albany.place5.address, locations.albany.place6.address, locations.albany.place7.address];
+let albanywebArray = [locations.albany.place1.website, locations.albany.place2.website, locations.albany.place3.website, locations.albany.place4.website, locations.albany.place5.website, locations.albany.place6.website, locations.albany.place7.website];
+
+
+/*for (let i = 0; i < 5; i++){
     let x = Math.floor(Math.random() * 7);
     console.log(yonkersArray[x]);
 }
@@ -181,4 +196,66 @@ for (let i = 0; i < 5; i++){
 for (let i = 0; i < 5; i++){
     let x = Math.floor(Math.random() * 7);
     console.log(albanyArray[x]);
+} */
+
+let albanyButton = document.getElementById("albany-button");
+
+let BronxButton = document.getElementById("bronx-button");
+
+let YonkersButton = document.getElementById("yonkers-button");
+
+albanyButton.onclick = function() {
+    let item_name1 = document.getElementById("item_name1");
+    let item_name2 = document.getElementById("item_name2");
+    let item_name3 = document.getElementById("item_name3");
+    let item_name4 = document.getElementById("item_name4");
+    let item_name5 = document.getElementById("item_name5");
+
+    let itemArray = [item_name1, item_name2, item_name3, item_name4, item_name5];
+    let usedIndexes = [];
+    let personCount = 0;
+    while(personCount < 5) {
+        let x = Math.floor(Math.random() * 7);
+        if(usedIndexes.includes(x)){
+
+        }
+        else {
+            let y = 0
+            itemArray[y].innerHTML = albanynameArray;
+            usedIndexes.push(x);
+            personCount++;
+            y++;
+        }
+    }
+}
+
+BronxButton.onclick = function() {
+    let usedIndexes = [];
+    let personCount = 0;
+    while(personCount < 5) {
+        let x = Math.floor(Math.random() * 7);
+        if(usedIndexes.includes(x)){
+
+        }
+        else {
+            console.log(bronxArray[x]);
+            usedIndexes.push(x);
+            personCount++;
+        }
+    }
+}
+YonkersButton.onclick = function() {
+    let usedIndexes = [];
+    let personCount = 0;
+    while(personCount < 5) {
+        let x = Math.floor(Math.random() * 7);
+        if(usedIndexes.includes(x)){
+
+        }
+        else {
+            console.log(yonkersArray[x]);
+            usedIndexes.push(x);
+            personCount++;
+        }
+    }
 }

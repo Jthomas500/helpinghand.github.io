@@ -205,13 +205,13 @@ let BronxButton = document.getElementById("bronx-button");
 let YonkersButton = document.getElementById("yonkers-button");
 
 albanyButton.onclick = function() {
-    let item_name1 = document.getElementById("item_name1");
-    let item_name2 = document.getElementById("item_name2");
-    let item_name3 = document.getElementById("item_name3");
-    let item_name4 = document.getElementById("item_name4");
-    let item_name5 = document.getElementById("item_name5");
+    let item1 = document.getElementById("item1");
+    let item2 = document.getElementById("item2");
+    let item3 = document.getElementById("item3");
+    let item4 = document.getElementById("item4");
+    let item5 = document.getElementById("item5");
 
-    let itemArray = [item_name1, item_name2, item_name3, item_name4, item_name5];
+    let itemArray = [item1, item2, item3, item4, item5];
     let usedIndexes = [];
     let personCount = 0;
     while(personCount < 5) {
@@ -221,7 +221,9 @@ albanyButton.onclick = function() {
         }
         else {
             let y = 0
-            itemArray[y].innerHTML = albanynameArray;
+            name1 = document.createElement("h1");
+            name1.innerHTML = albanynameArray[x];
+            itemArray[y].appendChild(name1);
             usedIndexes.push(x);
             personCount++;
             y++;

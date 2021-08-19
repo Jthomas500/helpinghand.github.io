@@ -127,7 +127,7 @@ let locations = {
         },
         place4: {
             name: "Regional Food Bank of Northeastern New York",
-            description: "Regional Food Bank of Northeastern New York is a ",
+            description: "Regional Food Bank of Northeastern New York is an organization that has been collecting food from various places like from the food industry and donates them to other charitable agencies that distribute the food to those in need.",
             address: "965 Albany-Shaker Rd",
             website: "https://regionalfoodbank.net/volunteer/",
             image: "images/Regional Food Bank.png",
@@ -172,7 +172,7 @@ let yonkerswebArray = [locations.yonkers.place1.website, locations.yonkers.place
 
 let bronxnameArray = [locations.bronx.place1.name, locations.bronx.place2.name, locations.bronx.place3.name, locations.bronx.place4.name, locations.bronx.place5.name, locations.bronx.place6.name, locations.bronx.place7.name];
 let bronximgArray = [locations.bronx.place1.image, locations.bronx.place2.image, locations.bronx.place3.image, locations.bronx.place4.image, locations.bronx.place5.image, locations.bronx.place6.image, locations.bronx.place7.image];
-let bronxdesArray = [locations.bronx.place1.description, locations.bronx.place2, description, locations.bronx.place3.description, locations.bronx.place4.description, locations.bronx.place5.description, locations.bronx.place6.description, locations.bronx.place7.description];
+let bronxdesArray = [locations.bronx.place1.description, locations.bronx.place2.description, locations.bronx.place3.description, locations.bronx.place4.description, locations.bronx.place5.description, locations.bronx.place6.description, locations.bronx.place7.description];
 let bronxaddArray = [locations.bronx.place1.address, locations.bronx.place2.address, locations.bronx.place3.address, locations.bronx.place4.address, locations.bronx.place5.address, locations.bronx.place6.address, locations.bronx.place7.address];
 let bronxwebArray = [locations.bronx.place1.website, locations.bronx.place2.website, locations.bronx.place3.website, locations.bronx.place4.website, locations.bronx.place5.website, locations.bronx.place6.website, locations.bronx.place7.website];
 
@@ -181,7 +181,6 @@ let albanyimgArray = [locations.albany.place1.image, locations.albany.place2.ima
 let albanydesArray = [locations.albany.place1.description, locations.albany.place2.description, locations.albany.place3.description, locations.albany.place4.description, locations.albany.place5.description, locations.albany.place6.description, locations.albany.place7.description];
 let albanyaddArray = [locations.albany.place1.address, locations.albany.place2.address, locations.albany.place3.address, locations.albany.place4.address, locations.albany.place5.address, locations.albany.place6.address, locations.albany.place7.address];
 let albanywebArray = [locations.albany.place1.website, locations.albany.place2.website, locations.albany.place3.website, locations.albany.place4.website, locations.albany.place5.website, locations.albany.place6.website, locations.albany.place7.website];
-
 
 /*for (let i = 0; i < 5; i++){
     let x = Math.floor(Math.random() * 7);
@@ -204,14 +203,15 @@ let BronxButton = document.getElementById("bronx-button");
 
 let YonkersButton = document.getElementById("yonkers-button");
 
-albanyButton.onclick = function() {
-    let item1 = document.getElementById("item1");
-    let item2 = document.getElementById("item2");
-    let item3 = document.getElementById("item3");
-    let item4 = document.getElementById("item4");
-    let item5 = document.getElementById("item5");
+    let div1 = document.getElementById("item1");
+    let div2 = document.getElementById("item2");
+    let div3 = document.getElementById("item3");
+    let div4 = document.getElementById("item4");
+    let div5 = document.getElementById("item5");
 
-    let itemArray = [item1, item2, item3, item4, item5];
+    let divArray = [div1, div2, div3, div4, div5];
+
+albanyButton.onclick = function() {
     let usedIndexes = [];
     let personCount = 0;
     while(personCount < 5) {
@@ -221,9 +221,34 @@ albanyButton.onclick = function() {
         }
         else {
             let y = 0
-            name1 = document.createElement("h1");
+            let name1 = document.createElement("h1");
             name1.innerHTML = albanynameArray[x];
-            itemArray[y].appendChild(name1);
+            name1.className = "name";
+
+            let image1 = document.createElement("img");
+            image1.src = albanyimgArray[x];
+            image1.className = "image";
+
+            let description1 = document.createElement("p");
+            description1.innerHTML = albanydesArray[x];
+            description1.className = "description";
+
+            let address1 = document.createElement("p");
+            address1.innerHTML = "Address: " + albanyaddArray[x];
+            address1.className = "address";
+
+            let website1 = document.createElement("a")
+            website1.href = albanywebArray[x];
+            website1.className = "website";
+            website1.innerHTML = "Click here for the website";
+            website1.target = "_blank";
+
+            divArray[y].appendChild(name1);
+            divArray[y].appendChild(image1);
+            divArray[y].appendChild(description1);
+            divArray[y].appendChild(address1);
+            divArray[y].appendChild(website1);
+
             usedIndexes.push(x);
             personCount++;
             y++;
@@ -240,9 +265,38 @@ BronxButton.onclick = function() {
 
         }
         else {
-            console.log(bronxArray[x]);
+            let y = 0
+            let name1 = document.createElement("h1");
+            name1.innerHTML = bronxnameArray[x];
+            name1.className = "name";
+
+            let image1 = document.createElement("img");
+            image1.src = bronximgArray[x];
+            image1.className = "image";
+
+            let description1 = document.createElement("p");
+            description1.innerHTML = bronxdesArray[x];
+            description1.className = "description";
+
+            let address1 = document.createElement("p");
+            address1.innerHTML = "Address: " + bronxaddArray[x];
+            address1.className = "address";
+
+            let website1 = document.createElement("a")
+            website1.href = bronxwebArray[x];
+            website1.className = "website";
+            website1.innerHTML = "Click here for the website";
+            website1.target = "_blank";
+
+            divArray[y].appendChild(name1);
+            divArray[y].appendChild(image1);
+            divArray[y].appendChild(description1);
+            divArray[y].appendChild(address1);
+            divArray[y].appendChild(website1);
+
             usedIndexes.push(x);
             personCount++;
+            y++;
         }
     }
 }
@@ -255,9 +309,38 @@ YonkersButton.onclick = function() {
 
         }
         else {
-            console.log(yonkersArray[x]);
+            let y = 0
+            let name1 = document.createElement("h1");
+            name1.innerHTML = yonkersnameArray[x];
+            name1.className = "name";
+
+            let image1 = document.createElement("img");
+            image1.src = yonkersimgArray[x];
+            image1.className = "image";
+
+            let description1 = document.createElement("p");
+            description1.innerHTML = yonkersdesArray[x];
+            description1.className = "description";
+
+            let address1 = document.createElement("p");
+            address1.innerHTML = "Address: " + yonkersaddArray[x];
+            address1.className = "address";
+
+            let website1 = document.createElement("a")
+            website1.href = yonkerswebArray[x];
+            website1.className = "website";
+            website1.innerHTML = "Click here for the website";
+            website1.target = "_blank";
+
+            divArray[y].appendChild(name1);
+            divArray[y].appendChild(image1);
+            divArray[y].appendChild(description1);
+            divArray[y].appendChild(address1);
+            divArray[y].appendChild(website1);
+
             usedIndexes.push(x);
             personCount++;
+            y++;
         }
     }
 }

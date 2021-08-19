@@ -344,3 +344,13 @@ YonkersButton.onclick = function() {
         }
     }
 }
+
+logoButton = document.getElementById("logo");
+logoButton.onclick = function() {
+    window.location.reload();
+}
+
+titleButton = document.getElementById("title");
+titleButton.onclick = function() {
+    window.location.reload();
+}

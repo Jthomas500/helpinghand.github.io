@@ -62,18 +62,22 @@
 
 #nav-home:hover{
     background: rgb(101, 255, 84);
+    border: 3px solid rgb(101, 255, 84);
 }
 
 #nav-about:hover{
     background: rgb(101, 255, 84);
+    border: 3px solid rgb(101, 255, 84);
 }
 
 #nav-how-it-works:hover{
     background: rgb(101, 255, 84);
+    border: 3px solid rgb(101, 255, 84);
 }
 
 #nav-get-started:hover{
     background: rgb(101, 255, 84);
+    border: 3px solid rgb(101, 255, 84);
 }
 
 #about-divider{
